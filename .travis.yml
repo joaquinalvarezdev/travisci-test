@@ -7,4 +7,4 @@ env:
     - API_URL: https://dev-api.soos.io/api/
     - TARGET_URL: https://soos-dast-juice-shop.herokuapp.com/#/
 script:
-  - docker run -it --rm soosio/dast --clientId=$SOOS_CLIENT_ID --apiKey=$SOOS_API_KEY --projectName=$PROJECT_NAME --scanMode=$SCAN_MODE --apiURL=$API_URL $TARGET_URL
+  - docker run -it --rm soosio/dast --clientId=$SOOS_CLIENT_ID --apiKey=$SOOS_API_KEY --projectName="$PROJECT_NAME" --scanMode=$SCAN_MODE --apiURL=$API_URL $TARGET_URL
